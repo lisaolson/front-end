@@ -1,0 +1,52 @@
+/* Inherited by all elements */
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+
+	box-sizing: border-box;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase; 
+
+    /* determines if back part of an element
+    is visible when you transform it 
+    removes - shakiness - bug */
+    backface-visibility: hidden;
+
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+    
+        /* Other animation functions */
+        /* Starts faster and then is slower at the end */
+    /*   
+        animation-timing-function: ease-out;
+        animation-delay: 3s;
+    */
+        /* happens 3 times */
+    /*  animation-iteration-count: 3; */
+        
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+    
+        animation: moveInRight 1.5s ease-out;
+    }
+}
