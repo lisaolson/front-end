@@ -9,6 +9,39 @@ html {
   /* one rem is 10px */
   font-size: 62.5%; }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    /* goes backward in the x direction */
+    transform: translateX(-10rem); }
+  80% {
+    /* intermediate position slightly to the right */
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    /* goes forward in the x direction */
+    transform: translateX(10rem); }
+  80% {
+    /* intermediate position slightly to the right */
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    /* goes forward in the x direction */
+    transform: translateY(4rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 /* Inherited by all elements */
 body {
   font-family: "Lato", sans-serif;
@@ -18,32 +51,6 @@ body {
   color: #777;
   padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  /* 95% of viewport height */
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url("../img/hero.jpg");
-  /* follow width of viewport/element */
-  background-size: cover;
-  /* top stays the same, bottom changes */
-  background-position: top;
-  position: relative;
-  /* specifies polygon in which the el is still visible */
-  /* 0 0 in the top left, 100 0 in the top right */
-  /* 100 in the bottom right, 200px on the y axis */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -121,3 +128,57 @@ body {
     animation: moveInButton .5s ease-out .75s;
     /* automatically applies styles to 0 before animation starts */
     animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 2rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 2rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 2rem) / 3) + 2rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 2rem) / 4) + 2rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); }
+
+.header {
+  /* 95% of viewport height */
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url("../img/hero.jpg");
+  /* follow width of viewport/element */
+  background-size: cover;
+  /* top stays the same, bottom changes */
+  background-position: top;
+  position: relative;
+  /* specifies polygon in which the el is still visible */
+  /* 0 0 in the top left, 100 0 in the top right */
+  /* 100 in the bottom right, 200px on the y axis */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
