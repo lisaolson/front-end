@@ -15,6 +15,7 @@
     /* specifies polygon in which the el is still visible */
     /* 0 0 in the top left, 100 0 in the top right */
     /* 100 in the bottom right, 200px on the y axis */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logo-box {
