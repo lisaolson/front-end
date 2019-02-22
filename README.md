@@ -13,10 +13,10 @@ This repository contains front-end websites built following the Advanced CSS Cou
 - CSS3
 - CSS Grid
 
-##### Images
+### Images
 Below contains screenshots of the completed sites.
 
-
+#### Natours
 ![Screen Shot of Final Product](images/natours_full.png)
 
 ##### Author
