@@ -27,10 +27,15 @@
 
     // How much to grow, shrink, and size
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
     // 82%; remaining 18
     flex: 1;
+    height: 80rem;
 }
