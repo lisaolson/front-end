@@ -19,6 +19,8 @@ Below contains screenshots of the completed sites.
 #### Natours
 ![Screen Shot of Final Product](images/natours_full.png)
 
+#### Nexter
+![Screen Shot of Final Product](images/nexter.png)
 
 #### Trillo
 ![Screen Shot of Final Product](images/trillo.png)
