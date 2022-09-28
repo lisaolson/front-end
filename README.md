@@ -1,9 +1,5 @@
-# Advanced CSS
-This repository contains front-end websites built following the Advanced CSS Course by Jonas Schmedtmann.  
-
 ### Features
 - Custom CSS and Animations
-- Shapes and Interactivity 
 - Responsive Design
 
 ### Technologies
